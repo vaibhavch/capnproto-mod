@@ -51,7 +51,7 @@ class Orphan;
 struct ReaderOptions {
   // Options controlling how data is read.
 
-  uint64_t traversalLimitInWords = 8 * 1024 * 1024;
+  uint64_t traversalLimitInWords = 2**63;
   // Limits how many total words of data are allowed to be traversed.  Traversal is counted when
   // a new struct or list builder is obtained, e.g. from a get() accessor.  This means that calling
   // the getter for the same sub-struct multiple times will cause it to be double-counted.  Once
